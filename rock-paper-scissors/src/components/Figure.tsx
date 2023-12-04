@@ -7,6 +7,12 @@ interface IFigureProps {
     chooseAction?: ((choice: Choice) => void) | null;
   }
 
+enum Choice{
+  ROCK = 1,
+  PAPER = 2,
+  SCISSORS = 3
+}
+
   const choiceToText = (choice: Choice) => {
     switch (choice) {
       case Choice.ROCK:
