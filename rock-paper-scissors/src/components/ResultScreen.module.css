@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enhanced {
+    font-size: 1.5em;
+}
