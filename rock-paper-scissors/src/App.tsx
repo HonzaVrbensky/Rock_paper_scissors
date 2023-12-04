@@ -14,11 +14,16 @@ export const App = () => {
 
 const [kind, setKind] = useState();
 const [selectedChoice, setSelectedChoice] = useState<Choice>(null);
+const [score, setScore] = useState<number>(0);
 
 
 
   return (
     <Layout>
+      {<PlayScreen setScore={setScore}></PlayScreen>}
+      {<Choices setKind={setKind}></Choices>}
+      {<Figure kind={kind} selectedChoice={selectedChoice}></Figure>}
+      {<PlayScreen></PlayScreen>}
       {<Choices setKind={setKind}></Choices>}
       {<Figure kind={kind} selectedChoice={selectedChoice}></Figure>}
     </Layout>

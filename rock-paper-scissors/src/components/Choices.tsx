@@ -9,12 +9,12 @@ enum Choice{
 }
 
 interface IChoices {
-  kind: Choice;
+  setKind: (kind : Choice) => void;
   selectedChoice: Choice | null;
   chooseAction?: ((choice: Choice) => void) | null;
 }
 
-export const Choices: React.FC<IChoices> = ({kind, selectedChoice, chooseAction}) => {
+export const Choices: React.FC<IChoices> = ({setKind, selectedChoice, chooseAction}) => {
     return (
         <div className={styles.container}>
           <Figure kind={Choice.ROCK} selectedChoice={selectedChoice} chooseAction={chooseAction} />
