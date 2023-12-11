@@ -7,10 +7,11 @@ interface IFigureProps {
     chooseAction?: ((choice: Choice) => void) | null;
   }
 
-enum Choice{
+export enum Choice{
+  NONE = 0,
   ROCK = 1,
   PAPER = 2,
-  SCISSORS = 3
+  SCISSORS = 3,
 }
 
   const choiceToText = (choice: Choice) => {
@@ -21,6 +22,8 @@ enum Choice{
         return "Paper";
       case Choice.SCISSORS:
         return "Scissors";
+      case Choice.NONE:
+        return "None"
     }
   }
 
